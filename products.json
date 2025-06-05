@@ -1,0 +1,66 @@
+[
+    {
+        "id": "fruity-passion",
+        "name": "Fruity Passion Tea",
+        "price": 12000,
+        "category": "fruity",
+        "imageSrc": "images/product-fruity-series.png",
+        "altText": "Fruity Passion Tea"
+    },
+    {
+        "id": "classic-milk-tea",
+        "name": "Classic Milk Tea",
+        "price": 8000,
+        "category": "milk-tea",
+        "imageSrc": "images/product-milk-tea.png",
+        "altText": "Classic Milk Tea"
+    },
+    {
+        "id": "pure-jasmine-tea",
+        "name": "Pure Jasmine Tea",
+        "price": 7000,
+        "category": "jasmine-tea",
+        "imageSrc": "images/product-jasmine-tea.png",
+        "altText": "Pure Jasmine Tea"
+    },
+    {
+        "id": "signature-coffee",
+        "name": "Signature Coffee Blend",
+        "price": 11000,
+        "category": "coffee",
+        "imageSrc": "images/product-coffee-cup.png",
+        "altText": "Signature Coffee Blend"
+    },
+    {
+        "id": "matcha-latte",
+        "name": "Matcha Latte",
+        "price": 10000,
+        "category": "milk-tea",
+        "imageSrc": "images/product-matcha-latte.png",
+        "altText": "Matcha Latte"
+    },
+    {
+        "id": "dimsum-ayam",
+        "name": "Dimsum Ayam Original",
+        "price": 15000,
+        "category": "dimsum",
+        "imageSrc": "images/dimsum-ayam.png",
+        "altText": "Dimsum Ayam Original"
+    },
+    {
+        "id": "dimsum-udang",
+        "name": "Dimsum Udang Kristal",
+        "price": 18000,
+        "category": "dimsum",
+        "imageSrc": "images/dimsum-udang.png",
+        "altText": "Dimsum Udang Kristal"
+    },
+    {
+        "id": "dimsum-mix",
+        "name": "Dimsum Mix Platter",
+        "price": 25000,
+        "category": "dimsum",
+        "imageSrc": "images/dimsum-mix.png",
+        "altText": "Dimsum Mix Platter"
+    }
+]

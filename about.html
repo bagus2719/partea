@@ -13,21 +13,29 @@
 <body>
     <header>
         <nav class="navbar">
-            <ul class="nav-links-left">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-            </ul>
             <div class="logo">
                 <a href="index.html"><img src="images/partea-logo.png" alt="Partea Logo"></a>
             </div>
-            <div class="nav-actions-right">
-                <a href="cart.html" class="cart-btn">
-                    <i class="bi bi-cart3 cart-icon"></i>
-                    Add To Cart
-                </a>
-                <a href="contact.html" class="contact-btn">Contact Us</a>
+
+            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu" aria-expanded="false">
+                <i class="bi bi-list icon-hamburger"></i>
+                <i class="bi bi-x icon-close"></i>
+            </button>
+
+            <div class="main-nav-links" id="mainNavLinks">
+                <ul class="nav-links-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                </ul>
+                <div class="nav-actions-right">
+                    <a href="cart.html" class="cart-btn">
+                        <i class="bi bi-cart3 cart-icon"></i>
+                        Cart <span class="cart-item-count"></span>
+                    </a>
+                    <a href="contact.html" class="contact-btn">Contact Us</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -36,7 +44,7 @@
         <section class="about-hero-section content-section">
             <div class="about-hero-content">
                 <div class="about-hero-image">
-                    <img src="images/about-hero-tea.jpg" alt="Teh Partea Pilihan Lengkap">
+                    <img src="images/about-hero-tea.png" alt="Teh Partea Pilihan Lengkap">
                 </div>
                 <div class="about-hero-text">
                     <h1 class="section-title">Pilihan Lengkap Untuk Setiap Selera.</h1>
@@ -71,10 +79,7 @@
         <div class="footer-main">
             <div class="footer-column">
                 <h4>Hubungi Kami</h4>
-                <p>+62 856-0009-8534</p>
-                <p>www.ParTeahappy.Com</p>
-                <p>9889 Lorem ipsum Street, Pellentesque, CA, USA</p>
-            </div>
+                <p>+62 895-2335-2302</p> <p>dimsummamma@gmail.com</p> <p>Jl. Bendungan Sutami No.15, Sumbersari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</p> </div>
             <div class="footer-column">
                 <h4>Jam Operasional</h4>
                 <p>Monday-Friday 9:00-23:00</p>
@@ -87,12 +92,9 @@
         </div>
         <div class="footer-social-media">
             <a href="#" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-        </div>
+            <a href="https://www.instagram.com/dimsum.mamma" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a> <a href="https://www.tiktok.com/@dimsum.mamma" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a> </div>
         <div class="footer-copyright">
-            <p>Copyright By ParTea</p>
-        </div>
+            <p>Copyright By Partea</p> </div>
     </footer>
 
     <script src="js/script.js"></script>

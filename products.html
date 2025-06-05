@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partea - Products</title>
+    <title>Dimsum Mamma - Produk</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Montserrat:wght@700&family=Satisfy&display=swap" rel="stylesheet">
@@ -13,21 +13,29 @@
 <body>
     <header>
         <nav class="navbar">
-            <ul class="nav-links-left">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-            </ul>
             <div class="logo">
-                <a href="index.html"><img src="images/partea-logo.png" alt="Partea Logo"></a>
+                <a href="index.html"><img src="images/partea-logo.png" alt="Dimsum Mamma Logo"></a>
             </div>
-            <div class="nav-actions-right">
-                <a href="cart.html" class="cart-btn">
-                    <i class="bi bi-cart3 cart-icon"></i>
-                    Add To Cart
-                </a>
-                <a href="contact.html" class="contact-btn">Contact Us</a>
+
+            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu" aria-expanded="false">
+                <i class="bi bi-list icon-hamburger"></i>
+                <i class="bi bi-x icon-close"></i>
+            </button>
+
+            <div class="main-nav-links" id="mainNavLinks">
+                <ul class="nav-links-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                </ul>
+                <div class="nav-actions-right">
+                    <a href="cart.html" class="cart-btn">
+                        <i class="bi bi-cart3 cart-icon"></i>
+                        Cart <span class="cart-item-count"></span>
+                    </a>
+                    <a href="contact.html" class="contact-btn">Contact Us</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -36,54 +44,56 @@
         <section class="product-variants-section content-section">
             <div class="section-header-with-nav">
                 <h1 class="section-title">Varian Produk</h1>
-                <div class="carousel-nav">
-                    <button class="arrow-btn prev-btn"><i class="bi bi-arrow-left-short"></i></button>
-                    <button class="arrow-btn next-btn"><i class="bi bi-arrow-right-short"></i></button>
                 </div>
-            </div>
-            <div class="variants-showcase">
-                <div class="variant-card-product">
-                    <img src="images/product-fruity-series.jpg" alt="Fruity Series">
-                    <h3>Fruity Passion Tea</h3>
-                </div>
-                <div class="variant-card-product">
-                    <img src="images/product-milk-tea.jpg" alt="Milk Tea Series">
-                    <h3>Classic Milk Tea</h3>
-                </div>
-                <div class="variant-card-product">
-                    <img src="images/product-jasmine-tea.jpg" alt="Jasmine Tea">
-                    <h3>Pure Jasmine Tea</h3>
-                </div>
-                <div class="variant-card-product">
-                    <img src="images/product-coffee-cup.jpg" alt="Coffee">
-                    <h3>Signature Coffee Blend</h3>
-                </div>
-            </div>
+
             <div class="product-categories">
-                <a href="#" class="category-link"><i class="bi bi-square-fill"></i> Fruity Series</a>
-                <a href="#" class="category-link"><i class="bi bi-square-fill"></i> Milk Tea Series</a>
-                <a href="#" class="category-link"><i class="bi bi-square-fill"></i> Jasmine Tea</a>
-                <a href="#" class="category-link"><i class="bi bi-square-fill"></i> Coffee</a>
+                <a href="#" class="category-link active-filter" data-filter="all"><i class="bi bi-tags-fill"></i> Semua Kategori</a>
+                <a href="#" class="category-link" data-filter="fruity"><i class="bi bi-palette-fill"></i> Fruity Series</a>
+                <a href="#" class="category-link" data-filter="milk-tea"><i class="bi bi-cup-straw"></i> Milk Tea Series</a>
+                <a href="#" class="category-link" data-filter="jasmine-tea"><i class="bi bi-flower1"></i> Jasmine Tea</a>
+                <a href="#" class="category-link" data-filter="coffee"><i class="bi bi-cup-hot-fill"></i> Coffee</a>
+                <a href="#" class="category-link" data-filter="dimsum"><i class="bi bi-egg-fried"></i> Dimsum</a>
             </div>
+
+            <div class="variants-showcase">
+                </div>
         </section>
 
         <section class="products-our-menu-section content-section bg-light">
             <div class="products-menu-content">
                 <div class="products-menu-text">
-                    <p class="menu-header-sub">HOUSE OF PARTEA</p>
+                    <p class="menu-header-sub">DIMSUM MAMMA</p>
                     <h2 class="section-title">Our Best Menu</h2>
                     <ul class="menu-list-products">
-                        <li><span>Original Tea</span> <span class="price">6K</span></li>
-                        <li><span>Our SuperStar Spesial Milk Tea</span> <span class="price">8K</span></li>
-                        <li><span>Es Kopi Cucu</span> <span class="price">11K</span></li>
-                        <li><span>Our Signature Kopi</span> <span class="price">11K</span></li>
-                        <li><span>Fruity Mix Flavour</span> <span class="price">12K</span></li>
-                        <li><span>Kesegaran Buah Pilihan, Hanya Di Fruity Mix</span> <span class="price">12K</span></li>
+                        <li data-product-id="original-tea" data-product-name="Original Tea" data-product-price="6000">
+                            <span>Original Tea</span> <span class="price">6K</span>
+                            <button class="add-to-cart-btn-list">Add</button>
+                        </li>
+                        <li data-product-id="superstar-milk-tea" data-product-name="Our SuperStar Spesial Milk Tea" data-product-price="8000">
+                            <span>Our SuperStar Spesial Milk Tea</span> <span class="price">8K</span>
+                            <button class="add-to-cart-btn-list">Add</button>
+                        </li>
+                        <li data-product-id="es-kopi-cucu" data-product-name="Es Kopi Cucu" data-product-price="11000">
+                            <span>Es Kopi Cucu</span> <span class="price">11K</span>
+                            <button class="add-to-cart-btn-list">Add</button>
+                        </li>
+                        <li data-product-id="signature-kopi" data-product-name="Our Signature Kopi" data-product-price="11000">
+                            <span>Our Signature Kopi</span> <span class="price">11K</span>
+                            <button class="add-to-cart-btn-list">Add</button>
+                        </li>
+                        <li data-product-id="fruity-mix-flavour" data-product-name="Fruity Mix Flavour" data-product-price="12000">
+                            <span>Fruity Mix Flavour</span> <span class="price">12K</span>
+                            <button class="add-to-cart-btn-list">Add</button>
+                        </li>
+                        <li data-product-id="fruity-mix-pilihan" data-product-name="Kesegaran Buah Pilihan, Hanya Di Fruity Mix" data-product-price="12000">
+                            <span>Kesegaran Buah Pilihan, Hanya Di Fruity Mix</span> <span class="price">12K</span>
+                            <button class="add-to-cart-btn-list">Add</button>
+                        </li>
                     </ul>
                 </div>
                 <div class="products-menu-images">
-                    <img src="images/products-menu-gallery-1.jpg" alt="Menu Drinks 1">
-                    <img src="images/products-menu-gallery-2.jpg" alt="Menu Drinks 2">
+                    <img src="images/products-menu-gallery-1.png" alt="Menu Drinks 1">
+                    <img src="images/products-menu-gallery-2.png" alt="Menu Drinks 2">
                 </div>
             </div>
         </section>
@@ -93,9 +103,9 @@
         <div class="footer-main">
             <div class="footer-column">
                 <h4>Hubungi Kami</h4>
-                <p>+62 856-0009-8534</p>
-                <p>www.ParTeahappy.Com</p>
-                <p>9889 Lorem ipsum Street, Pellentesque, CA, USA</p>
+                <p><a href="https://wa.me/6289523352302" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">+62 895-2335-2302</a></p>
+                <p><a href="mailto:dimsummamma@gmail.com" style="color: inherit; text-decoration: none;">dimsummamma@gmail.com</a></p>
+                <p>Jl. Bendungan Sutami No.15, Sumbersari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</p>
             </div>
             <div class="footer-column">
                 <h4>Jam Operasional</h4>
@@ -108,15 +118,28 @@
             </a>
         </div>
         <div class="footer-social-media">
-            <a href="#" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.instagram.com/dimsum.mamma" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@dimsum.mamma" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
         </div>
         <div class="footer-copyright">
-            <p>Copyright By ParTea</p>
+            <p>Copyright By Dimsum Mamma</p>
         </div>
     </footer>
 
+    <div id="custom-toast" class="toast-message">
+        <span id="toast-text"></span>
+    </div>
+    <div id="custom-modal-overlay" class="modal-overlay">
+        <div id="custom-modal" class="modal-content">
+            <button id="modal-close-btn-x" class="modal-close-x">&times;</button>
+            <h3 id="modal-title">Konfirmasi Tindakan</h3>
+            <p id="modal-message">Apakah Anda yakin ingin melanjutkan?</p>
+            <div class="modal-actions">
+                <button id="modal-cancel-btn" class="btn-modal btn-modal-cancel">Batal</button>
+                <button id="modal-confirm-btn" class="btn-modal btn-modal-confirm">Hapus</button>
+            </div>
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

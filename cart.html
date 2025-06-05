@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partea - Shopping Cart</title>
+    <title>Dimsum Mamma - Keranjang Belanja</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Montserrat:wght@700&family=Satisfy&display=swap" rel="stylesheet">
@@ -13,29 +13,49 @@
 <body>
     <header>
         <nav class="navbar">
-            <ul class="nav-links-left">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-            </ul>
             <div class="logo">
-                <a href="index.html"><img src="images/partea-logo.png" alt="Partea Logo"></a>
+                <a href="index.html"><img src="images/partea-logo.png" alt="Dimsum Mamma Logo"></a>
             </div>
-            <div class="nav-actions-right">
-                <a href="cart.html" class="cart-btn">
-                    <i class="bi bi-cart3 cart-icon"></i>
-                    Add To Cart
-                </a>
-                <a href="contact.html" class="contact-btn">Contact Us</a>
+
+            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu" aria-expanded="false">
+                <i class="bi bi-list icon-hamburger"></i>
+                <i class="bi bi-x icon-close"></i>
+            </button>
+
+            <div class="main-nav-links" id="mainNavLinks">
+                <ul class="nav-links-left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                </ul>
+                <div class="nav-actions-right">
+                    <a href="cart.html" class="cart-btn">
+                        <i class="bi bi-cart3 cart-icon"></i>
+                        Cart <span class="cart-item-count"></span>
+                    </a>
+                    <a href="contact.html" class="contact-btn">Contact Us</a>
+                </div>
             </div>
         </nav>
     </header>
 
     <main class="cart-page content-section">
         <h1 class="section-title">Keranjang Belanja Anda</h1>
-        <div class="cart-empty-placeholder">
-            <i class="bi bi-cart-x" style="font-size: 60px; color: #ccc;"></i>
+        
+        <div id="cart-items-container" class="cart-items-container-class">
+            </div>
+
+        <div id="cart-summary" class="cart-summary-class">
+            <div class="cart-summary-details">
+                <p>Total Item: <span id="total-cart-items">0</span></p>
+                <p class="total-price-label">Total Harga: <span id="total-cart-price">Rp 0</span></p>
+            </div>
+            <button id="checkout-btn" class="explore-btn checkout-button-class">Lanjut ke Pembayaran</button>
+        </div>
+
+        <div class="cart-empty-placeholder" id="cart-empty-message">
+            <i class="bi bi-cart-x" style="font-size: 64px; color: #d0d0d0; margin-bottom: 15px;"></i>
             <p>Keranjang belanja Anda masih kosong.</p>
             <a href="products.html" class="explore-btn">Mulai Belanja</a>
         </div>
@@ -45,9 +65,9 @@
         <div class="footer-main">
             <div class="footer-column">
                 <h4>Hubungi Kami</h4>
-                <p>+62 856-0009-8534</p>
-                <p>www.ParTeahappy.Com</p>
-                <p>9889 Lorem ipsum Street, Pellentesque, CA, USA</p>
+                <p><a href="https://wa.me/6289523352302" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">+62 895-2335-2302</a></p>
+                <p><a href="mailto:dimsummamma@gmail.com" style="color: inherit; text-decoration: none;">dimsummamma@gmail.com</a></p>
+                <p>Jl. Bendungan Sutami No.15, Sumbersari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</p>
             </div>
             <div class="footer-column">
                 <h4>Jam Operasional</h4>
@@ -60,15 +80,28 @@
             </a>
         </div>
         <div class="footer-social-media">
-            <a href="#" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.instagram.com/dimsum.mamma" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@dimsum.mamma" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
         </div>
         <div class="footer-copyright">
-            <p>Copyright By ParTea</p>
+            <p>Copyright By Dimsum Mamma</p>
         </div>
     </footer>
 
+    <div id="custom-toast" class="toast-message">
+        <span id="toast-text"></span>
+    </div>
+    <div id="custom-modal-overlay" class="modal-overlay">
+        <div id="custom-modal" class="modal-content">
+            <button id="modal-close-btn-x" class="modal-close-x">&times;</button>
+            <h3 id="modal-title">Konfirmasi Tindakan</h3>
+            <p id="modal-message">Apakah Anda yakin ingin melanjutkan?</p>
+            <div class="modal-actions">
+                <button id="modal-cancel-btn" class="btn-modal btn-modal-cancel">Batal</button>
+                <button id="modal-confirm-btn" class="btn-modal btn-modal-confirm">Hapus</button>
+            </div>
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
