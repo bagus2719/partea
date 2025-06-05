@@ -3,53 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partea - Home</title>
+    <title>Partea - Shopping Cart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Montserrat:wght@700&family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="home-page"> <header>
+<body>
+    <header>
         <nav class="navbar">
+            <ul class="nav-links-left">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
             <div class="logo">
                 <a href="index.html"><img src="images/partea-logo.png" alt="Partea Logo"></a>
             </div>
-
-            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu" aria-expanded="false">
-                <i class="bi bi-list icon-hamburger"></i>
-                <i class="bi bi-x icon-close"></i>
-            </button>
-
-            <div class="main-nav-links" id="mainNavLinks">
-                <ul class="nav-links-left">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                </ul>
-                <div class="nav-actions-right">
-                    <a href="cart.html" class="cart-btn">
-                        <i class="bi bi-cart3 cart-icon"></i>
-                        Add To Cart
-                    </a>
-                    <a href="contact.html" class="contact-btn">Contact Us</a>
-                </div>
+            <div class="nav-actions-right">
+                <a href="cart.html" class="cart-btn">
+                    <i class="bi bi-cart3 cart-icon"></i>
+                    Add To Cart
+                </a>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title-brand">Partea</h1>
-                <h2 class="hero-tagline">The Part Of Tea That Makes You Feel Like A Party</h2>
-                <p class="hero-description">
-                    Bingung mau minum apa hari ini? Di ParTea, kami punya semuanya! Destinasi utama untuk para pencinta teh, kopi, penggila milk tea, dan pecinta minuman fruity. Apapun suasana hati AndaParT Tea Solusinya.
-                </p>
-                <a href="products.html" class="explore-btn">Explore</a>
-            </div>
-        </section>
+    <main class="cart-page content-section">
+        <h1 class="section-title">Keranjang Belanja Anda</h1>
+        <div class="cart-empty-placeholder">
+            <i class="bi bi-cart-x" style="font-size: 60px; color: #ccc;"></i>
+            <p>Keranjang belanja Anda masih kosong.</p>
+            <a href="products.html" class="explore-btn">Mulai Belanja</a>
+        </div>
     </main>
 
     <footer class="site-footer">

@@ -45,7 +45,7 @@ img {
     display: block;
 }
 
-button, .explore-btn {
+button, .explore-btn, .cart-btn, .contact-btn {
     cursor: pointer;
     font-family: 'Lato', sans-serif;
     border: none;
@@ -53,6 +53,8 @@ button, .explore-btn {
     border-radius: 5px;
     font-weight: 700;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
 }
 
 .content-section {
@@ -144,7 +146,7 @@ button, .explore-btn {
     background-color: transparent;
     color: #555;
     border: 1px solid #ddd;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
 }
@@ -153,6 +155,12 @@ button, .explore-btn {
     background-color: #f5f5f5;
     border-color: #ccc;
 }
+.cart-btn.active {
+    background-color: #e9e8d8;
+    border-color: #6A8B4C;
+    color: #6A8B4C;
+}
+
 
 .cart-icon {
     font-size: 18px;
@@ -166,6 +174,24 @@ button, .explore-btn {
 
 .contact-btn:hover {
     background-color: #4A525A;
+}
+.contact-btn.active {
+    background-color: #6A8B4C;
+    color: #fff;
+}
+
+.hamburger-menu {
+    display: none; /* Sembunyikan di desktop */
+    background: none;
+    border: none;
+    font-size: 28px; /* Ukuran ikon hamburger */
+    color: #333;
+    cursor: pointer;
+    z-index: 1001; /* Pastikan di atas elemen lain jika menu overlay */
+}
+
+.hamburger-menu .icon-close {
+    display: none; /* Sembunyikan ikon close by default */
 }
 
 .hero-section {
@@ -226,7 +252,7 @@ button, .explore-btn {
     transform: translateY(-2px);
 }
 
-.about-page main, .products-page main, .testimonials-page main {
+.about-page main, .products-page main, .testimonials-page main, .cart-page main, .contact-page main {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -485,13 +511,13 @@ button, .explore-btn {
 
 .products-menu-images img {
     width: 100%;
-    border-radius: 18px;
+    border-radius: 8px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     object-fit: cover;
-    height: 200px;
+    height: 180px;
 }
 .products-menu-images img:first-child {
-    height:420px;
+    height: 220px;
 }
 
 .testimonial-quote-section {
@@ -575,13 +601,117 @@ button, .explore-btn {
     margin-top: 30px;
 }
 
+.contact-page {
+    padding-top: 40px;
+}
+.contact-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: left;
+}
+.contact-form-container {
+    flex: 2;
+    min-width: 300px;
+}
+.contact-details-container {
+    flex: 1;
+    min-width: 280px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+}
+.contact-details-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+.contact-details-container p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contact-details-container p i {
+    color: #6A8B4C;
+    font-size: 18px;
+}
+.contact-social-icons {
+    margin-top: 20px;
+}
+.contact-social-icons a {
+    margin-right: 15px;
+    font-size: 22px;
+    color: #5C5C50;
+    opacity: 0.8;
+}
+.contact-social-icons a:hover {
+    opacity: 1;
+    color: #6A8B4C;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+.contact-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #555;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.contact-form .explore-btn {
+    display: inline-block;
+    width: auto;
+}
+
+.cart-page {
+     padding-top: 40px;
+}
+.cart-empty-placeholder {
+    text-align: center;
+    padding: 50px 20px;
+    border: 2px dashed #e0e0e0;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #fdfdfd;
+}
+.cart-empty-placeholder p {
+    font-size: 18px;
+    color: #777;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.cart-empty-placeholder .explore-btn {
+    font-size: 16px;
+}
+
 
 .site-footer {
     background-color: #E9E8D8;
     color: #5C5C50;
     padding-top: 40px;
     font-size: 14px;
-    margin-top: auto; /* Mendorong footer ke bawah */
+    margin-top: auto;
 }
 
 .footer-main {
@@ -680,14 +810,91 @@ button, .explore-btn {
 }
 
 @media (max-width: 768px) {
-    .navbar { flex-direction: column; height: auto; padding: 15px; }
-    .navbar .nav-links-left, .navbar .nav-actions-right { width: 100%; justify-content: center; margin-top: 10px; }
-    .nav-links-left { margin-bottom: 15px; flex-direction: column; align-items: center; gap: 10px; }
-    .logo { margin-bottom: 15px; }
-    .nav-actions-right { flex-direction: column; gap: 10px; }
-    .nav-actions-right .cart-btn, .nav-actions-right .contact-btn { width: 80%; max-width: 250px; margin: 5px auto; }
+    .navbar {
+        flex-direction: row; /* Ubah kembali ke row untuk logo dan hamburger */
+        justify-content: space-between; /* Logo di kiri, hamburger di kanan */
+        align-items: center;
+        height: 75px; /* Kembalikan tinggi jika perlu, atau sesuaikan */
+        padding: 15px 20px; /* Sesuaikan padding navbar */
+        position: relative; /* Untuk positioning menu mobile jika absolute */
+    }
 
-    .hero-section { min-height: calc(100vh - 75px); text-align: center; } /* Assuming navbar is not fixed in this view */
+    .logo {
+        margin-bottom: 0; /* Hapus margin bottom jika ada dari style sebelumnya */
+    }
+
+    .hamburger-menu {
+        display: block; /* Tampilkan hamburger di mobile */
+    }
+
+    .hamburger-menu.active .icon-hamburger {
+        display: none;
+    }
+
+    .hamburger-menu.active .icon-close {
+        display: block;
+    }
+
+    .main-nav-links {
+        display: none; /* Sembunyikan nav links utama by default di mobile */
+        position: absolute;
+        top: 75px; /* Sesuaikan dengan tinggi navbar */
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid #eee;
+    }
+
+    .main-nav-links.active {
+        display: flex; /* Tampilkan ketika menu aktif */
+    }
+
+    .nav-links-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Jarak antar link di menu mobile */
+        width: 100%;
+        margin-bottom: 20px; /* Jarak dari nav-links ke nav-actions */
+    }
+
+    .nav-links-left li a {
+        padding: 10px 0;
+        font-size: 18px; /* Ukuran font link di menu mobile */
+    }
+
+    .nav-actions-right {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Jarak antar tombol di menu mobile */
+        width: 100%;
+        margin-top: 0; /* Hapus margin-top jika ada */
+    }
+
+    .nav-actions-right .cart-btn,
+    .nav-actions-right .contact-btn {
+        width: 80%; /* Lebar tombol di menu mobile */
+        max-width: 250px;
+        text-align: center;
+        padding: 12px 20px; /* Sesuaikan padding tombol */
+    }
+    
+    /* Sembunyikan .nav-links-left dan .nav-actions-right yang mungkin masih ada */
+    /* dari aturan lama jika tidak terbungkus .main-nav-links */
+    /* .navbar > .nav-links-left, */
+    /* .navbar > .nav-actions-right { */
+    /* display: none; */
+    /* } */
+
+
+    /* Aturan responsif lainnya yang sudah Anda miliki, pastikan tidak konflik */
+    /* ... (hero section, content section, dll. tetap seperti sebelumnya atau sesuaikan jika perlu) ... */
+    .hero-section { min-height: calc(100vh - 75px); text-align: center; } /* Sesuaikan 75px jika tinggi navbar berubah */
     .hero-content { padding-left: 15px; padding-right: 15px; }
     .hero-title-brand { font-size: 32px; }
     .hero-tagline { font-size: 30px; }
@@ -718,6 +925,7 @@ button, .explore-btn {
     .testimonial-card { flex-basis: 100%; }
     .testimonial-image-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;}
 
+    .contact-content-wrapper { flex-direction: column; }
 
     .footer-main { flex-direction: column; align-items: center; text-align: center; gap: 25px; }
     .footer-column { min-width: auto; width: 100%; max-width: 350px; }
@@ -725,8 +933,14 @@ button, .explore-btn {
 }
 
 @media (max-width: 480px) {
-    .nav-links-left li a { font-size:15px; }
-    .cart-btn, .contact-btn { font-size: 14px; padding: 8px 15px; }
+    /* .nav-links-left li a { font-size:15px; } (Mungkin tidak relevan lagi jika di menu mobile) */
+    .cart-btn, .contact-btn { /* Ini mungkin masih relevan untuk tombol di dalam menu mobile */
+        font-size: 14px; 
+        /* padding: 8px 15px; (Sudah diatur di atas) */
+    }
+    .main-nav-links.active .nav-links-left li a {
+        font-size: 16px; /* Sedikit penyesuaian untuk link di menu pada layar sangat kecil */
+    }
     .hero-tagline { font-size: 26px; }
     .hero-description { font-size: 15px; }
     .variant-card-product { flex-basis: 100%; }
