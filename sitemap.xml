@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://partea.wuaze.com/index.html</loc>
+    <lastmod>2025-06-07</lastmod>
+    <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://partea.wuaze.com/about.html</loc>
+    <lastmod>2025-06-07</lastmod>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://partea.wuaze.com/products.html</loc>
+    <lastmod>2025-06-07</lastmod>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://partea.wuaze.com/testimonials.html</loc>
+    <lastmod>2025-06-07</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://partea.wuaze.com/contact.html</loc>
+    <lastmod>2025-06-07</lastmod>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://partea.wuaze.com/cart.html</loc>
+    <lastmod>2025-06-07</lastmod>
+    <priority>0.50</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+</urlset>

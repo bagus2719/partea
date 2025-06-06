@@ -1,0 +1,10 @@
+# Allow all web crawlers to access all content
+User-agent: *
+Disallow:
+
+# Google-specific crawler
+User-agent: Googlebot
+Disallow:
+
+# Location of sitemap file
+Sitemap: http://partea.wuaze.com/sitemap.xml
