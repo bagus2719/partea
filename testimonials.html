@@ -23,15 +23,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Montserrat:wght@700&family=Satisfy&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="icon" type="image/png" href="images/partea-logo.png">
     <link rel="stylesheet" href="css/style.css" />
 </head>
-  <body>
+<body>
     <header>
       <nav class="navbar">
         <div class="logo">
-          <a href="index.html"
-            ><img src="images/partea-logo.png" alt="Partea Logo"
-          /></a>
+          <a href="index.html"><img src="images/partea-logo.png" alt="Partea Logo" /></a>
         </div>
 
         <button
@@ -106,18 +105,22 @@
           <img
             src="images/testimonial-gallery-1.png"
             alt="Suasana interior kedai Partea Malang yang nyaman"
+            loading="lazy"
           />
           <img
             src="images/testimonial-gallery-2.png"
             alt="Pengunjung menikmati minuman di Partea"
+            loading="lazy"
           />
           <img
             src="images/testimonial-gallery-3.png"
             alt="Berbagai varian minuman teh dari Partea"
+            loading="lazy"
           />
           <img
             src="images/testimonial-gallery-4.png"
             alt="Gelas minuman fruity series Partea yang segar"
+            loading="lazy"
           />
         </div>
         <a href="products.html" class="explore-btn">Explore</a>
@@ -128,8 +131,8 @@
       <div class="footer-main">
         <div class="footer-column">
           <h4>Hubungi Kami</h4>
-          <p>+62 895-2335-2302</p>
-          <p>dimsummamma@gmail.com</p>
+          <p><a href="https://wa.me/6289523352302" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">+62 895-2335-2302</a></p>
+          <p><a href="mailto:dimsummamma@gmail.com" style="color: inherit; text-decoration: none;">dimsummamma@gmail.com</a></p>
           <p>
             Jl. Bendungan Sutami No.15, Sumbersari, Kec. Lowokwaru, Kota Malang,
             Jawa Timur 65145
@@ -146,18 +149,17 @@
         </a>
       </div>
       <div class="footer-social-media">
-        <a href="#" target="_blank" aria-label="Twitter"
-          ><i class="bi bi-twitter-x"></i
-        ></a>
         <a
           href="https://www.instagram.com/dimsum.mamma"
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="Instagram"
           ><i class="bi bi-instagram"></i
         ></a>
         <a
           href="https://www.tiktok.com/@dimsum.mamma"
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="TikTok"
           ><i class="bi bi-tiktok"></i
         ></a>
@@ -166,6 +168,21 @@
         <p>Copyright By Partea</p>
       </div>
     </footer>
+
+    <div id="custom-toast" class="toast-message">
+        <span id="toast-text"></span>
+    </div>
+    <div id="custom-modal-overlay" class="modal-overlay">
+        <div id="custom-modal" class="modal-content">
+            <button id="modal-close-btn-x" class="modal-close-x" aria-label="Tutup">&times;</button>
+            <h3 id="modal-title">Konfirmasi Tindakan</h3>
+            <p id="modal-message">Apakah Anda yakin ingin melanjutkan?</p>
+            <div class="modal-actions">
+                <button id="modal-cancel-btn" class="btn-modal btn-modal-cancel">Batal</button>
+                <button id="modal-confirm-btn" class="btn-modal btn-modal-confirm">Hapus</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
   </body>

@@ -230,10 +230,7 @@ button, .explore-btn, .cart-btn, .contact-btn {
 
 
 .hero-section {
-    background-image: url('../images/home-hero-background.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: transparent;
     min-height: calc(100vh - 75px);
     display: flex;
     padding-left: 10%;
@@ -501,9 +498,17 @@ button, .explore-btn, .cart-btn, .contact-btn {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: #333;
-    margin-bottom: 10px; 
+    margin-bottom: 8px; 
     line-height: 1.3;
     min-height: 42px;
+}
+
+.variant-card-product .variant-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #6A8B4C;
+    margin-bottom: 12px;
 }
 
 .variant-card-product .add-to-cart-btn {
@@ -924,6 +929,55 @@ button, .explore-btn, .cart-btn, .contact-btn {
 .checkout-button-class { 
     padding: 12px 30px; 
     font-size: 17px; 
+}
+
+.cart-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.btn-clear-cart {
+    background-color: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-clear-cart:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.btn-continue-shopping {
+    background-color: #f1f3f5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.btn-continue-shopping:hover {
+    background-color: #e9ecef;
+    color: #212529;
 }
 
 
@@ -1403,6 +1457,16 @@ button, .explore-btn, .cart-btn, .contact-btn {
         text-align: center;
         width: 100%;
         margin-bottom: 15px;
+    }
+    .cart-actions-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .cart-actions-group > * {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
     }
     .checkout-button-class {
         width: 100%; 

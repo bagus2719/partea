@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimsum Mamma - Keranjang Belanja</title>
+    <title>Keranjang Belanja - Partea Malang</title>
+    <meta name="description" content="Periksa pesanan menu Partea Anda di keranjang belanja. Pesan minuman favorit Anda dan selesaikan transaksi dengan mudah melalui WhatsApp.">
+    <link rel="canonical" href="http://partea.wuaze.com/cart.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://partea.wuaze.com/cart.html">
+    <meta property="og:title" content="Keranjang Belanja - Partea Malang">
+    <meta property="og:description" content="Periksa daftar pesanan dan checkout minuman favorit Anda dengan mudah.">
+    <meta property="og:image" content="http://partea.wuaze.com/images/partea-logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Montserrat:wght@700&family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/png" href="images/partea-logo.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="images/partea-logo.png" alt="Dimsum Mamma Logo"></a>
+                <a href="index.html"><img src="images/partea-logo.png" alt="Partea Logo"></a>
             </div>
 
             <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu" aria-expanded="false">
@@ -44,14 +54,18 @@
         <h1 class="section-title">Keranjang Belanja Anda</h1>
         
         <div id="cart-items-container" class="cart-items-container-class">
-            </div>
+        </div>
 
         <div id="cart-summary" class="cart-summary-class">
             <div class="cart-summary-details">
                 <p>Total Item: <span id="total-cart-items">0</span></p>
                 <p class="total-price-label">Total Harga: <span id="total-cart-price">Rp 0</span></p>
             </div>
-            <button id="checkout-btn" class="explore-btn checkout-button-class">Lanjut ke Pembayaran</button>
+            <div class="cart-actions-group">
+                <a href="products.html" class="btn-continue-shopping"><i class="bi bi-arrow-left"></i> Tambah Menu Lain</a>
+                <button id="clear-cart-btn" class="btn-clear-cart" type="button"><i class="bi bi-trash3"></i> Kosongkan</button>
+                <button id="checkout-btn" class="explore-btn checkout-button-class" type="button"><i class="bi bi-whatsapp"></i> Pesan via WhatsApp</button>
+            </div>
         </div>
 
         <div class="cart-empty-placeholder" id="cart-empty-message">
@@ -84,7 +98,7 @@
             <a href="https://www.tiktok.com/@dimsum.mamma" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
         </div>
         <div class="footer-copyright">
-            <p>Copyright By Dimsum Mamma</p>
+            <p>Copyright By Partea</p>
         </div>
     </footer>
 
@@ -93,7 +107,7 @@
     </div>
     <div id="custom-modal-overlay" class="modal-overlay">
         <div id="custom-modal" class="modal-content">
-            <button id="modal-close-btn-x" class="modal-close-x">&times;</button>
+            <button id="modal-close-btn-x" class="modal-close-x" aria-label="Tutup">&times;</button>
             <h3 id="modal-title">Konfirmasi Tindakan</h3>
             <p id="modal-message">Apakah Anda yakin ingin melanjutkan?</p>
             <div class="modal-actions">
